@@ -1,10 +1,10 @@
 # CodeBase-Go
 关于Go语言的CodeBase，可能包括Web框架、模板
 
-##Chapter1-http
+## Chapter1-http
 发送post、get请求的各种方式
 
-###1. get请求
+### 1. get请求
 ````
 http.Get(url)
 ...
@@ -14,7 +14,7 @@ client.Get(url)
 req, err := http.NewRequest("GET", url, body)
 client.Do(req)
 ````
-###2. post请求
+### 2. post请求
 ````
 http.Post(url, contentType, body)
 ...
