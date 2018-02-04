@@ -38,15 +38,18 @@ client.PostForm(url, url.Values{"key": {"Value"}, "id": {"123"}})
 ### 1. 简单的HTTP服务器
 ````go
 func main() {
+
 	http.HandleFunc("/hello", HandlerHello)
+	http.Handle("/hello2", http.HandlerFunc(HandlerHello))
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
 func HandlerHello(w http.ResponseWriter, r *http.Request)  {
 	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
 ````
 
+### 2. 自定义hanlder
 ````go
 //自定义hanlder
 type MyHandler struct {}
@@ -62,7 +65,8 @@ func (handler MyHandler) ServeHTTP (w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
 ````
-### 2. 自定义server对象
+
+### 3. 自定义server对象
 ```go
 type Handler struct {}
 
@@ -80,6 +84,20 @@ func (handler Handler) ServeHTTP (w http.ResponseWriter, r *http.Request) {
 	} else {
 		fmt.Fprintln(w, "Hello World")
 	}
+}
+```
 
+### 4. 控制路由访问
+```go
+func main() {
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", indexHandle)
+	mux.HandleFunc("/index", indexHandle)
+	
+    log.Fatal(http.ListenAndServe(":8080", mux))
+}
+func indexHandle(w http.ResponseWriter, r *http.Request)  {
+	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
 ```

@@ -8,9 +8,12 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/hello", HandlerHello)
+
+	http.HandleFunc("/hello", helloHandle)
+	http.Handle("/hello2", http.HandlerFunc(helloHandle))
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-func HandlerHello(w http.ResponseWriter, r *http.Request)  {
+func helloHandle(w http.ResponseWriter, r *http.Request)  {
 	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
