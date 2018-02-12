@@ -16,6 +16,7 @@ req, err := http.NewRequest("GET", url, body)
 client.Do(req)
 ````
 ### 2. post请求
+详情请见httpPost.go
 ````go
 // 基本的使用
 http.Post(url, contentType, body)
