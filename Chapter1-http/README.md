@@ -1,4 +1,4 @@
-# Chapter1-http请求
+# Chapter1-http GET&POST请求
 常见的发送post、get请求的方式
 
 ### 1. get请求

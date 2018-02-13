@@ -8,5 +8,5 @@ Go语言的一些常见用法，可作为模版使用。
 ### [Chapter2-server http服务](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter2-server)
 创建http服务常见的几种方式
 
-### [Chapter3-test 测试](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter3-test)
+### [Chapter3-test 单元测试与性能测试](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter3-test)
 单元测试与性能测试的使用方法
