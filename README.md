@@ -10,3 +10,6 @@ Go语言的一些常见用法，可作为模版使用。
 
 ### [Chapter3-test 单元测试与性能测试](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter3-test)
 单元测试与性能测试的使用方法
+
+### [Chapter4-error 异常处理](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter4-error)
+异常的处理方式，包括异常的使用方法、异常的捕获与恢复等。
