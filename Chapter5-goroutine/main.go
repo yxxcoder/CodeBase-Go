@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// 一段时候后主协程结束 spinner协程也随之结束
 func main() {
 	go spinner(100 * time.Millisecond)
 	const n = 45
