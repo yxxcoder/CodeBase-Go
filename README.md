@@ -13,3 +13,6 @@ Go语言的一些常见用法，可作为模版使用。
 
 ### [Chapter4-error 异常处理](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter4-error)
 异常的处理方式，包括异常的使用方法、异常的捕获与恢复等。
+
+### [Chapter5-goroutine 协程](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter5-goroutine)
+GO语言中协程的使用方法
