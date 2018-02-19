@@ -44,5 +44,40 @@ func deferPanic(){
 		log.Println("--second--")
 	}()
 }
+
+
+// 输出结果:
+// 2018/02/19 18:58:05 Print array [2 3]
+// 2018/02/19 18:58:05 Println array [2 3]
+// 2018/02/19 18:58:05 Printf array with item [2,3]
+// 2018/02/19 18:58:05 test for defer Panic
+// 2018/02/19 18:58:05 --first--
+// 2018/02/19 18:58:05 test for defer Panic
 ````
 
+### 2. 自定义Logger
+log.Logger提供了一个New方法用来创建对象, 详情请见customize.go
+
+````go
+func main(){
+
+	fileName := "Chapter7-log/Info_First.log"
+	logFile,err  := os.Create(fileName)
+
+	defer logFile.Close()
+	if err != nil {
+		log.Fatalln("open file error")
+	}
+
+	debugLog := log.New(logFile,"[Info]",log.Llongfile)
+	debugLog.Println("A Info message here")
+
+	debugLog.SetPrefix("[Debug]")
+	debugLog.Println("A Debug Message here ")
+}
+
+
+// Info_First.log 内容:
+// [Info]/Users/yuxuan/Project/GoProject/CodeBase-Go/Chapter7-log/customize.go:32: A Info message here
+// [Debug]/Users/yuxuan/Project/GoProject/CodeBase-Go/Chapter7-log/customize.go:35: A Debug Message here 
+````
