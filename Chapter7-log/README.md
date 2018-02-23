@@ -78,6 +78,6 @@ func main(){
 
 
 // Info_First.log 内容:
-// [Info]/Users/yuxuan/Project/GoProject/CodeBase-Go/Chapter7-log/customize.go:32: A Info message here
-// [Debug]/Users/yuxuan/Project/GoProject/CodeBase-Go/Chapter7-log/customize.go:35: A Debug Message here 
+// [Info]/Users/yxxcoder/Project/GoProject/CodeBase-Go/Chapter7-log/customize.go:32: A Info message here
+// [Debug]/Users/yxxcoder/Project/GoProject/CodeBase-Go/Chapter7-log/customize.go:35: A Debug Message here 
 ````
