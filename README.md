@@ -16,3 +16,12 @@ Go语言的一些常见用法，可作为模版使用。
 
 ### [Chapter5-goroutine 协程](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter5-goroutine)
 GO语言中协程的使用方法
+
+### [Chapter6-template 模版引擎](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter6-template)
+GO语言中模版引擎的使用方法
+
+### [Chapter7-log 日志](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter7-log)
+记录日志的使用方法，包括基本使用及自定义Logger对象
+
+### [Chapter8-time 时间处理](https://github.com/yxxcoder/CodeBase-Go/tree/master/Chapter8-time)
+GO语言中时间处理的方式，包含时间戳、时间格式化、时间单位等
